@@ -145,6 +145,11 @@ def main():
 
     logging.info("Indexing complete")
 
+
+def build_vector_db():
+    os.makedirs(VECTOR_DB_PATH, exist_ok=True)
+    main()
+
 if __name__ == "__main__":
     os.makedirs(VECTOR_DB_PATH, exist_ok=True) 
     main()
