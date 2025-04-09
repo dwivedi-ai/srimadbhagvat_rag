@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srimad Bhagvatam Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="chat-container">
+        <div class="chat-header">
+             <h1>Srimad Bhagvatam RAG Chatbot</h1>
+        </div>
+
+        <div id="chat-box">
+            <div class="initial-view">
+                 <h2>Srimad Bhagvatam RAG Chat</h2>
+                 <h2 class="ask">Namaste! Ask anything related to Srimad Bhagavatam</h2>
+                 <div class="capabilities-grid">
+                     <div class="capability-column selectable">
+                         <h3><i class="fas fa-sun"></i> Examples</h3>
+                         <ul>
+                             <li>"Explain the concept of Maya" →</li>
+                             <li>"Who is Krishna?" →</li>
+                             <li>"Is life present only on Earth?" →</li>
+                             <li>"What is the meaning of life?" →</li>
+                         </ul>
+                     </div>
+                     <!-- <div class="capability-column">
+                         <h3><i class="fas fa-bolt"></i> Capabilities</h3>
+                         <ul>
+                             <li>Answers based on Srimad Bhagavatam</li>
+                             <li>Remembers context within the chat</li>
+                             <li>Provides summaries and explanations</li>
+                         </ul>
+                     </div> -->
+                     <div class="capability-column limitation">
+                         <h3><i class="fas fa-exclamation-triangle"></i> Limitations</h3>
+                         <ul>
+                             <li>Knowledge limited to Srimad Bhagavatam</li>
+                             <li>May occasionally misunderstand nuance</li>
+                             <li>Cannot provide external/real-time info</li>
+                             <li>Does not save chat sessions</li>
+                          </ul>
+                     </div>
+                 </div>
+             </div>
+            </div>
+
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="Ask about Srimad Bhagavatam..." autocomplete="off">
+            <button id="send-button" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+         <div id="loading-indicator" style="display: none;"></div>
+    </main>
+    <footer class="page-footer">
+        Vibe Coded by Ankit Dwivedi. Powered by Gemini 1.5 Flash. <a href="https://github.com/dwivedi-ai/srimadbhagvat_rag">GitHub Repository</a>
+    </footer>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
