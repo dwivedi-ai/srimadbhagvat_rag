@@ -2,7 +2,7 @@ import os
 import zipfile
 import requests
 
-def download_and_extract_vector_db(url, output_dir='/vector_db'):
+def download_and_extract_vector_db(url, output_dir='vector_db'):
     if os.path.exists(output_dir):
         print(f"[INFO] Vector DB already exists at {output_dir}")
         return

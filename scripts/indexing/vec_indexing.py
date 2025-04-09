@@ -7,8 +7,8 @@ from sentence_transformers import SentenceTransformer
 from tqdm import tqdm 
 
 # --- Configuration ---
-RAW_DATA_FILE = 'data/raw/raw_data.jsonl'
-VECTOR_DB_PATH = '/vector_db' 
+RAW_DATA_FILE = '../../data/raw/raw_data.jsonl'
+VECTOR_DB_PATH = '../../vector_db' 
 COLLECTION_NAME = "prabhupada_purports"
 EMBEDDING_MODEL_NAME = 'all-MiniLM-L6-v2'
 CHUNK_SEPARATOR = "\n\n"
@@ -130,7 +130,7 @@ def main():
             metadata={"hnsw:space": "cosine"}
         )
 
-        batch_size = 10
+        batch_size = 100
         logging.info(f"Adding chunks in batches of {batch_size}")
         for i in tqdm(range(0, len(chunk_ids), batch_size), desc="Adding to DB"):
             collection.add(

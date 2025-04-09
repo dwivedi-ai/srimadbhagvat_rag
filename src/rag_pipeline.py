@@ -10,7 +10,8 @@ load_dotenv()
 log = logging.getLogger(__name__)
 
 # --- Config ---
-VECTOR_DB_PATH = os.getenv('VECTOR_DB_PATH', 'vector_db/vector_db')
+from pathlib import Path
+VECTOR_DB_PATH = str(Path(__file__).parent.resolve() / "../vector_db/vector_db")
 COLLECTION_NAME = os.getenv('COLLECTION_NAME', "prabhupada_purports")
 EMBEDDING_MODEL_NAME = os.getenv('EMBEDDING_MODEL_NAME', 'all-MiniLM-L6-v2')
 GENERATION_MODEL_NAME = os.getenv('GENERATION_MODEL_NAME', 'gemini-1.5-flash')
