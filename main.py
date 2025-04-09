@@ -13,4 +13,4 @@ if __name__ == "__main__":
         download_and_extract_vector_db("https://github.com/dwivedi-ai/sb_vectorDB/raw/main/vector_db.zip")
 
 
-    subprocess.run(["python", "-m", "src.api"])
+    subprocess.run(["gunicorn", "-w", "2", "-b", "0.0.0.0:5000", "src.api:app"])
