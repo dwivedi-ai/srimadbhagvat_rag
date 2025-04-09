@@ -130,7 +130,7 @@ def main():
             metadata={"hnsw:space": "cosine"}
         )
 
-        batch_size = 100
+        batch_size = 10
         logging.info(f"Adding chunks in batches of {batch_size}")
         for i in tqdm(range(0, len(chunk_ids), batch_size), desc="Adding to DB"):
             collection.add(
