@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 # --- Configuration ---
 RAW_DATA_FILE = 'data/raw/raw_data.jsonl'
-VECTOR_DB_PATH = '../../vector_db' 
+VECTOR_DB_PATH = '/vector_db' 
 COLLECTION_NAME = "prabhupada_purports"
 EMBEDDING_MODEL_NAME = 'all-MiniLM-L6-v2'
 CHUNK_SEPARATOR = "\n\n"
